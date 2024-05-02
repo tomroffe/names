@@ -72,30 +72,30 @@ pub const NOUNS: &[&str] = &include!(concat!(env!("OUT_DIR"), "/nouns.rs"));
 /// A naming strategy for the `Generator`
 #[derive(Debug, PartialEq, Default)]
 pub enum Name {
-    /// This represents a Title cased naming strategy in the form of `"AdjectiveNoun"`
+    /// This represents a Title cased naming strategy in the form of `"adjective-noun"`
     Plain,
-    /// This represents a Title cased naming strategy in the form of `"AdjectiveNoun"`
+    /// This represents a Title cased naming strategy in the form of `"adjective-noun-number"`
     Numbered,
-    /// This represents a Title cased naming strategy in the form of `"AdjectiveNoun"`
+    /// This represents a Title cased naming strategy in the form of `"Adjective Noun"`
     TitleCase,
     /// This represents a Camel cased naming strategy in the form of `"adjectiveNoun"`
     CamelCase,
-    /// This represents a Class cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Class cased naming strategy in the form of `"AdjectiveNoun"`
     ClassCase,
-    /// This represents a Kebab cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Kebab cased naming strategy in the form of `"adjective-noun"`
     #[default]
     KebabCase,
-    /// This represents a Train cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Train cased naming strategy in the form of `"Adjective-Noun"`
     TrainCase,
-    /// This represents a Screaming Snake cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Screaming Snake cased naming strategy in the form of `"Adjective_Noun"`
     ScreamingSnakeCase,
-    /// This represents a Table cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Table cased naming strategy in the form of `"adjective-noun"`
     TableCase,
-    /// This represents a Sentence cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Sentence cased naming strategy in the form of `"Adjective noun"`
     SentenceCase,
-    /// This represents a Snake cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Snake cased naming strategy in the form of `"adjective_noun"`
     SnakeCase,
-    /// This represents a Pascal cased naming strategy in the form of `"adjectiveNoun"`
+    /// This represents a Pascal cased naming strategy in the form of `"AdjectiveNoun"`
     PascalCase,
 }
 

@@ -4,16 +4,46 @@
 
 ## [Unreleased] - ReleaseDate
 
-## [0.15.0] - 2024-04-23
+## [0.15.0] - 2024-05-01
 
 > **Breaking Change Upgrade Note For Library Users**
 >
-> Due to the addition of additional naming strategies
+> Due to the addition of additional naming strategies. You now need to pass `true` or `false` to the `Generator::new()` method.
+> 
+> ```rust
+> <!-- No Numbering -->
+> Generator::new(ADJECTIVES, NOUNS, naming, false)
+> 
+> <!-- Numbering -->
+> Generator::new(ADJECTIVES, NOUNS, naming, true)
+> ```
+ 
+- New naming strategies types added to complment `Name:Plain` and `Name::Numbered`. The new namging stratgies are as followed:
+
+  - Name::Plain **adjective-noun**
+  - Name::Numbered  **adjective-noun-number**
+  - Name::TitleCase **Adjective Noun**
+  - Name::CamelCase **adjectiveNoun**
+  - Name::ClassCase **AdjectiveNoun**
+  - Name::KebabCase **adjective-noun**
+  - Name::TrainCase **Adjective-Noun**
+  - Name::TableCase **adjective-noun**
+  - Name::SnakeCase **adjective_noun**
+  - Name::PascalCase **AdjectiveNoun**
+  - Name::SentenceCase **Adjective noun**
+  - Name::ScreamingSnakeCase **Adjective_Noun**
+
 
 ### Changed
 
 - upgrade to `regex` 1.10.4
 - added `Inflector` 0.11.4, used with the naming strategy `to_*_case()` logic.
+
+## [0.14.0] - 2022-06-28
+
+### Changed
+
+- upgrade to `regex` 1.5.6
 
 ## [0.13.0] - 2022-03-05
 
